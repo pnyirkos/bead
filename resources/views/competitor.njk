@@ -1,0 +1,16 @@
+{% extends 'master' %}
+
+{% block content %}
+<h1>{{ competitor.laststname }} {{ competitor.firstname }}</h1>
+<p>Győzelmek: {{ competitor.wins }}</p>
+
+
+{% if currentUser %}
+<form action="/competitor/{{ competitor.id }}/delete" method="POST">
+    {{ csrfField }}
+    <a class="btn btn-primary" href="/competitor/{{ competitor.id }}/edit" role="button">Módosítás</a>
+    <button type="submit" class="btn btn-danger">Törlés</button>    
+</form>
+{% endif %}
+
+{% endblock %}

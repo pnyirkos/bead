@@ -1,0 +1,18 @@
+{% extends 'master' %}
+
+{% block content %}
+<h1>{{ match.name }}</h1>
+<h4> {{ firstcomp.firstname }} {{ firstcomp.laststname }} vs {{ secondcomp.firstname }} {{ secondcomp.laststname }}</h2>
+<p> Bíró: {{ ref.name }}</p>
+<h4> Győztes: {{ winner.firstname }} {{ winner.laststname }} </h2>
+
+
+{% if currentUser %}
+<form action="/match/{{ match.id }}/delete" method="POST">
+    {{ csrfField }}
+    <a class="btn btn-primary" href="/match/{{ match.id }}/edit" role="button">Módosítás</a>
+    <button type="submit" class="btn btn-danger">Törlés</button>    
+</form>
+{% endif %}
+
+{% endblock %}

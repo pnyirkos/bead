@@ -1,0 +1,18 @@
+{% extends 'master' %}
+
+{% block content %}
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <!-- List group -->
+            <ul class="list-group">
+                {% for competitor in competitors %}
+                <li class="list-group-item">
+                    <a href="/competitor/{{ competitor.id }}">{{ competitor.firstname }} {{ competitor.laststname }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+</div>
+{% endblock %}
