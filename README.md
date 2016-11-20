@@ -13,12 +13,12 @@ A program legfőbb célja átláthatóan, és érthetően megjeleníteni egy ver
 * Regisztráció
 * Bejelentkezés
 * Csak bejelentkezett felhasználók által elérhető funkciók
-..* Új versenyző felvétele a listába
-..* Meglévő versenyző szerkesztése
-..* Meglévő versenyző törlése
-..* Új meccs felvétele a listába
-..*	Meglévő meccs szerkesztése
-..* Meglévő meccs törlése
+⋅⋅* Új versenyző felvétele a listába
+⋅⋅* Meglévő versenyző szerkesztése
+⋅⋅* Meglévő versenyző törlése
+⋅⋅* Új meccs felvétele a listába
+⋅⋅*	Meglévő meccs szerkesztése
+⋅⋅* Meglévő meccs törlése
 
 ###### Nem funkcionális követelmények:
 
