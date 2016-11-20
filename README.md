@@ -70,10 +70,6 @@ Egy példa az oldal használatára:
 
 **2.1. Architektúra Terv**
 
-###### Komponensdiagram:
-
-KÉP 3
-
 ###### Oldaltérkép:
 
 * Publikus: Főoldal/Versenyzők listája
@@ -110,6 +106,50 @@ KÉP 3
 * GET/match/id/edit: Meccs adatainak módosítása
 * POST/match/id/edit: Meccs új datainak felküldése
 * POST/match/id/delete: Meccs törlése
+
+###### Végső megvalósítás kinézete
+
+Bejelentkezés:
+
+![login](./img/login.png/ "login")
+
+Regisztráció:
+
+![register](./img/register.png/ "register")
+
+Főoldal/Versenyzők:
+
+![versenyzok](./img/competitors.png/ "versenyzok")
+
+Új versenyző:
+
+![uj versenyzo](./img/newcomp.png/ "uj versenyzo")
+
+Versenyző adatai:
+
+![versenyzo](./img/com.png/ "versenyzo")
+
+Versenyző módosítása:
+
+![versenyzo modositasa](./img/modcomp.png/ "versenyzo modositasa")
+
+Meccsek:
+
+![meccsek](./img/matches.png/ "meccsek")
+
+Új Meccs:
+
+![uj meccs](./img/newmatch.png/ "uj meccs")
+
+Meccs adatai:
+
+![meccsadat](./img/match.png/ "meccsadat")
+
+Meccs módosítása:
+
+![meccs modositasa](./img/modmatch.png/ "meccs modositasa")
+
+
 
 ###### Adatmodell
 
