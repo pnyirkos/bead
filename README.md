@@ -61,7 +61,7 @@ Egy példa az oldal használatára:
 4. A "Versenyző Módosítása" oldalon tudja módosítani az adatokat.
 5. A "Versenyző Mentése" gombbal tudja menteni a változtatásokat, a vissza gombbal viszont visszatér az adatokhoz változtatás nélkül. 
 
-![Peldadiagram](./img/pelda.jpg/ "Peldadiagram")
+![Peldadiagram](./img/pelda.png/ "Peldadiagram")
 
 
 ### 2. Tervezés
