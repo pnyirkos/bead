@@ -1,29 +1,14 @@
 'use strict'
 
-/*
-|--------------------------------------------------------------------------
-| Router
-|--------------------------------------------------------------------------
-|
-| AdonisJs Router helps you in defining urls and their actions. It supports
-| all major HTTP conventions to keep your routes file descriptive and
-| clean.
-|
-| @example
-| Route.get('/user', 'UserController.index')
-| Route.post('/user', 'UserController.store')
-| Route.resource('user', 'UserController')
-*/
-
 const Route = use('Route')
 
 Route.get('/', 'CompetitorController.main')
-Route.get('/competitor/:id', 'CompetitorController.show')
 Route.get('/competitorCreate', 'CompetitorController.create').middleware('auth')
 Route.post('/competitorCreate', 'CompetitorController.doCreate').middleware('auth')
 Route.get('/competitor/:id/edit', 'CompetitorController.edit').middleware('auth')
 Route.post('/competitor/:id/edit', 'CompetitorController.doEdit').middleware('auth')
 Route.post('/competitor/:id/delete', 'CompetitorController.doDelete').middleware('auth')
+Route.get('/competitor/:id', 'CompetitorController.show')
 
 Route.get('/matchAll', 'MatchController.main')
 Route.get('/match/:id', 'MatchController.show')
@@ -39,3 +24,10 @@ Route.post('/register', 'UserController.doRegister')
 Route.get('/login', 'UserController.login')
 Route.post('/login', 'UserController.doLogin')
 Route.get('/logout', 'UserController.doLogout')
+
+Route.group('ajax', function () {
+    Route.post('/login', 'UserController.ajaxLogin')
+    Route.post('/register', 'UserController.ajaxRegister')
+    Route.delete('/match/:id/delete', 'MatchController.ajaxDelete').middleware('auth')
+    Route.delete('/competitor/:id/delete', 'CompetitorController.ajaxDelete').middleware('auth')
+}).prefix('/ajax')

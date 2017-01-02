@@ -117,6 +117,15 @@ class CompetitorController {
         res.redirect('/')
     }
 
+    * ajaxDelete(req, res) {
+    const id = req.param('id');
+    const competitor = yield Competitor.find(id);
+
+    yield competitor.delete()
+
+    res.ok({ succes: true })
+}
+
 }
 
 module.exports = CompetitorController

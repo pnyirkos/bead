@@ -148,6 +148,16 @@ class MatchController {
         res.redirect('/matchAll')
     }
 
+    * ajaxDelete (req, res) {
+        const match = yield Match.find(req.param('id'))
+
+        yield match.delete()
+
+        res.ok({
+            success: true
+        })
+    }
+
 }
 
 module.exports = MatchController
