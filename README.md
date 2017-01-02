@@ -218,6 +218,67 @@ Visual Studio Code (Node.js - adonis.js keretrendszer)
 13. A felső sávban bejelentkezés után az "új meccs felvitele" gombbal tudunk új meccset felvinni a nyílvántartásba.
 14. Az adatok beírása/kiválasztása után a "Meccs felvitele" gombbal tudjuk menteni az új meccset. 
 
+# Második beadandó új funkciói
+
+### Regisztráció validálás
+
+* Új fájlok: -
+
+* Módosított fájlok: register.njk 
+
+* Használat: A regisztrációs oldalon ellenőrzi a felhasználó általi adatokat, és jelez ha nem megfelelőek. (Felugró ablakban nem működik)
+
+### Pop-Up bejelenetkezés
+
+* Új fájlok: ajaxLogin.js
+
+* Módosított fájlok: master.njk, login.njk, UserController.js, routes.js
+
+* Használat: Ha be kívánunk jelentkezni, és rákattintunk a bejelentkezés gombra, akkor a login oldal helyett
+egy felugró ablakban is be tudunk jelentkezni.
+
+![popup](./img/popup.png/ "popup")
+
+### Pop-Up regisztráció
+
+* Új fájlok: ajaxRegister.js
+
+* Módosított fájlok: master.njk, login.njk, UserController.js, routes.js
+
+* Használat: Ha regisztrálni kívánunk, és rákattintunk a regisztráció gombra, akkor a regisztrációs oldal helyett
+egy felugró ablakban is tudunk regisztrálni. (Itt nem működik a validáció, csak az eredeti regisztrációs oldalon.)
+
+
+### Versenyző törlésének megerősítése.
+
+* Új fájlok: ajaxDelete.js
+
+* Módosított fájlok: competitor.njk, CompetitorController.js, routes.js
+
+* Használat: A versenyző oldalán a törlés gombra kattintva, az azonnali törlés helyett egy felugró ablakban tudja a felhasználó megerősíteni a szándékát.
+
+### Meccs törlésének megerősítése.
+
+* Új fájlok: ajaxDelete.js
+
+* Módosított fájlok: match.njk, MatchController.js, routes.js
+
+* Használat: A meccs oldalán a törlés gombra kattintva, az azonnali törlés helyett egy felugró ablakban tudja a felhasználó megerősíteni a szándékát.
+
+# Tesztelés
+
+### Selenium IDE
+
+Szükséges szofter: 
+
+* [Firefox Browser](https://www.mozilla.org/hu/firefox/new/))
+* [Selenium IDE](https://addons.mozilla.org/hu/firefox/addon/selenium-ide/)
+
+Használat: 
+
+Sikeres telepítést következő a Firefox böngészőből tudjuk elindítani az IDE-t. 
+A teszteket a "test" mappából tudjuk betölteni, majd futtatni. 
+
 
 
 
